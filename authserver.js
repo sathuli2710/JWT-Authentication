@@ -36,7 +36,7 @@ app.post('/login', (req, res) =>{
 })
 
 function generateaccessToken(user){
-    return jwt.sign(user, process.env.ACCESS_SECRET_TOKEN, {expiresIn:'20s'})
+    return jwt.sign(user, process.env.ACCESS_SECRET_TOKEN, {expiresIn:'2m'})
 }
 
 app.listen(4000)
